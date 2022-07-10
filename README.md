@@ -1,10 +1,10 @@
 # 👋 Hi there, I'm Anish 
 
-## 🔭 Here's what I'm up to: <br /> 
+### 🔭 Here's what I'm up to: <br /> 
 🏫 I'm a student studying Computer Science @ UPenn <br /> 👨🏽‍💻I'm an engineer @ Mojo Vision & Penn Electric Racing
 
 
-## 📫 How to reach me: <br /> 
+### 📫 How to reach me: <br /> 
 <a href="https://www.linkedin.com/in/anishagrawa1/"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/linkedin.svg" alt="Anish | LinkedIn" width="21px"/></a>
 <a href="https://instagram.com/anishagrawal.jpg"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/instagram.svg" alt="Anish | Instagram" width="21px"/></a>
 <!--
