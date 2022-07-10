@@ -1,4 +1,6 @@
-### Hi there 👋
+## 👋 Hi there, I'm Anish 
+
+#### Here's a little more about me: <br /> 🏫 I'm a student studying Computer Science @ UPenn <br /> 👨🏽‍💻I'm an engineer @ Mojo Vision & Penn Electric Racing
 
 <!--
 **anishxyz/anishxyz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
