@@ -1,7 +1,7 @@
 # 👋 Hi there, I'm Anish 
 
 ### <u> 🔭 Here's what I'm up to: </u> <br /> 
-🏫 I'm a student studying Computer Science @ UPenn <br /> 👨🏽‍💻I'm an engineer @ Mojo Vision & Penn Electric Racing
+🏫 I'm a student studying Computer Science @ UPenn <br /> 👨🏽‍💻 I'm an engineer @ Mojo Vision & Penn Electric Racing
 
 
 ### 📫 <u> How to reach me: </u><br /> 
