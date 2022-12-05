@@ -7,7 +7,8 @@
 ### 📫 <u> How to reach me: </u><br /> 
 <a href="https://www.linkedin.com/in/anishagrawa1/"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/linkedin.svg" alt="Anish | LinkedIn" width="21px"/></a>
 <a href="https://instagram.com/anishagrawal.jpg"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/instagram.svg" alt="Anish | Instagram" width="21px"/></a>
-
+<br /> 
+<br /> 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anishxyz&layout=compact)](https://github.com/anishxyz)
 
 <!--
