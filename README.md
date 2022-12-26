@@ -29,7 +29,6 @@
 <a href="https://instagram.com/anishagrawal.jpg"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/instagram.svg" alt="Anish | Instagram" width="21px"/></a>
 <br /> 
 <br /> 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anishxyz&layout=compact&theme=github_dark)](https://github.com/anishxyz)
 
 <!--
 **anishxyz/anishxyz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -44,4 +43,6 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anishxyz&layout=compact&theme=github_dark)](https://github.com/anishxyz)
 -->
