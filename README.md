@@ -26,10 +26,20 @@
 <br />
 <br />
 ### 📫 <u> How to reach me: </u><br /> 
-<a href="https://www.linkedin.com/in/anishagrawa1/"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/linkedin.svg" alt="Anish | LinkedIn" width="21px"/></a>
-<a href="https://instagram.com/anishagrawal.jpg"><img align="left" src="https://raw.githubusercontent.com/anishxyz/anishxyz/main/images/instagram.svg" alt="Anish | Instagram" width="21px"/></a>
-<br /> 
-<br /> 
+<a href="https://www.linkedin.com/in/anishagrawa1/">
+    <img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://instagram.com/anishagrawal.jpg">
+    <img alt="" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+<a href="https://twitter.com/anishtxt">
+    <img alt="" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+</a>
+<a href="https://open.spotify.com/user/anish2003">
+    <img alt="" src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white" />
+</a>
+
+
 
 <!--
 **anishxyz/anishxyz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
