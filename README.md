@@ -1,7 +1,7 @@
 # 👋 Hello there, I'm Anish 
 
 ### <u> 🔭 Here's what I'm up to: </u> <br /> 
-🏫 I'm a student studying Computer Science + Robotics @ UPenn <br /> 👨🏽‍💻 I'm an engineer @ Autodesk, Penn Electric Racing
+🏫 I'm a student studying Computer Science + Robotics @ UPenn <br /> 👨🏽‍💻 I'm an engineer @ Autodesk, Penn Electric Racing <br /> 🟧 I'm building in AI @ Y Combinator
 <br /> 
 <br /> 
 ### <u> 💻 Skills: </u> <br /> 
