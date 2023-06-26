@@ -12,6 +12,7 @@
 ![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
 ![](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ##### <u> Backend: </u>
 ![](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
