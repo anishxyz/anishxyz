@@ -15,6 +15,7 @@
 ![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
 ![](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ##### <u> AI/ML: </u>
+![](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)<br />
 LLM Development w/ OpenAI, Anthropic, Open Source Models<br />
 VectorDB backend (Pinecone, Weaviate)<br />
 Langchain
