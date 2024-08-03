@@ -2,6 +2,6 @@
 
 👨🏽‍💻 &nbsp; I'm an engineer @ Scale AI (prev. Chatter, Autodesk, Mojo Vision) <br /> 
 🏫 &nbsp; Computer Science + Robotics @ UPenn (on leave) <br /> 
-🟧 &nbsp; Y Combinator S23 - Chatter (acq)
+🟧 &nbsp; Y Combinator S23 - Chatter (acq.)
 
 [x/twitter](https://twitter.com/anishtxt) [linkedin](https://www.linkedin.com/in/anishagrawa1/) [instagram](https://instagram.com/anishagrawal.jpg)
