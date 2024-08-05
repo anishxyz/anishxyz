@@ -1,13 +1,27 @@
+interface EmojiListItemProps {
+  emoji: string;
+  text: string;
+}
+
+const EmojiListItem = ({ emoji, text }: EmojiListItemProps) => (
+  <div className="flex items-start">
+    <span className="text-center mr-4">{emoji}</span>
+    <span className="flex-grow">{text}</span>
+  </div>
+);
+
 const ProfileSimple = () => {
     return (
-        <div>
-            <div className='pb-4'>
-                <h2 className="text-lg font-semibold">👋 Hello there, I&apos;m Anish</h2>
+        <div className='space-y-6'>
+            <div>
+                <h2 className="text-lg font-semibold">
+                    <EmojiListItem emoji="👋" text="Hello there, I'm Anish" />
+                </h2>
             </div>
-            <div className='pb-4'>
-                <p>👨🏽‍💻 I&apos;m an engineer @ Scale AI (prev. Chatter, Autodesk, Mojo Vision)</p>
-                <p>🏫 Computer Science + Robotics @ UPenn (on leave)</p>
-                <p>🟧 Y Combinator S23 Alum - Chatter (acq.)</p>
+            <div>
+                <EmojiListItem emoji="👨🏽‍💻" text="Building enterprise AI @ Scale AI (prev. Chatter, Autodesk, Mojo Vision)" />
+                <EmojiListItem emoji="🏫" text="Computer Science + Robotics @ UPenn (on leave)" />
+                <EmojiListItem emoji="🟧" text="Y Combinator S23 Alum - Chatter (acq.)" />
             </div>
             <p className='text-orange-600'>
                 <a className="underline" href="https://twitter.com/anishtxt">x/twitter</a> {' '}
