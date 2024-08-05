@@ -1,9 +1,9 @@
-import Image from "next/image";
+import ProfileSimple from "@/components/ProfileSimple";
 
 export default function Home() {
   return (
-    <main className="h-full w-full p-24">
-      <span>anish</span>
+    <main className="h-full w-full p-4">
+      <ProfileSimple/>
     </main>
   );
 }
