@@ -12,9 +12,9 @@ const EmojiListItem = ({ emoji, text }: EmojiListItemProps) => (
 
 const ProfileSimple = () => {
     return (
-        <div className='space-y-6'>
+        <div className='space-y-6 font-mono'>
             <div>
-                <h2 className="text-lg font-semibold">
+                <h2 className="text-md font-semibold">
                     <EmojiListItem emoji="👋" text="Hello there, I'm Anish" />
                 </h2>
             </div>
