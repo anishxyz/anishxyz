@@ -18,7 +18,7 @@ const Profile = () => {
             <p>Always excited to chat!</p>
             <p><strong>Anish Agrawal 😎</strong></p>
             <hr className="border-[#666]"/>
-            <div className="space-y-1 text-[#666]">
+            <div className="space-y-1 text-[#F37021]">
                 <a
                     href="https://x.com/anishtxt"
                     className="flex items-center group"
@@ -54,7 +54,7 @@ const Profile = () => {
                     href="https://www.instagram.com/anishagrawal.jpg"
                     className="flex items-center group"
                 >
-                    <p className="group-hover:font-bold">instagram: anishagrawal.jpg</p>
+                    <p className="group-hover:font-bold">instagram:anishagrawal.jpg</p>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
