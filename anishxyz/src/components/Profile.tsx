@@ -16,7 +16,7 @@ const Profile = () => {
                                                           className="hover:font-bold">Y Combinator</a></li>
             </ul>
             <p>Always excited to chat!</p>
-            <p><strong>Anish Agrawal</strong></p>
+            <p><strong>Anish Agrawal 😎</strong></p>
             <hr className="border-[#666]"/>
             <div className="space-y-1 text-[#666]">
                 <a
