@@ -18,7 +18,7 @@ const Profile = () => {
             <p>Always excited to chat!</p>
             <p><strong>Anish Agrawal 😎</strong></p>
             <hr className="border-[#666]"/>
-            <div className="space-y-1 text-[#F37021]">
+            <div className="space-y-1 text-[#C50]">
                 <a
                     href="https://x.com/anishtxt"
                     className="flex items-center group"
