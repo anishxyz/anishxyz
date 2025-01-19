@@ -2,18 +2,18 @@ const Profile = () => {
     return (
         <div className="font-mono text-sm leading-loose space-y-4">
             <p><strong>Hi!</strong> I&#39;m Anish and I like to build things.</p>
-            <p>I&#39;m currently working on <a href="https://scale.com/genai-platform" className="hover:font-bold">enterprise
-                ai @ Scale AI</a> and a scout for <a href="https://a16z.com" className="hover:font-bold">a16z</a>.</p>
+            <p>I&#39;m currently working on <a href="https://scale.com/genai-platform" className="hover:font-bold italic">enterprise
+                ai @ Scale AI</a> and a scout for <a href="https://a16z.com" className="hover:font-bold italic">a16z</a>.</p>
             <p>Previously:</p>
             <ul style={{listStyleType: 'disc', marginLeft: '1.5rem'}}>
                 <li>Studied computer science and robotics at the <a href="https://www.upenn.edu"
-                                                                    className="hover:font-bold">University of
+                                                                    className="hover:font-bold italic">University of
                     Pennsylvania</a></li>
                 <li>Co-founded <a href="https://www.ycombinator.com/companies/chatter"
-                                  className="hover:font-bold">Chatter</a> (acq.) and built developer tooling for AI
+                                  className="hover:font-bold italic">Chatter</a> (acq.) and built developer tooling for AI
                 </li>
                 <li>Founder in the summer &#39;23 batch of <a href="https://www.ycombinator.com"
-                                                          className="hover:font-bold">Y Combinator</a></li>
+                                                          className="hover:font-bold italic">Y Combinator</a></li>
             </ul>
             <p>Always excited to talk about startups, robotics, ai/ml, and food!</p>
             <p><strong>Anish Agrawal 😎</strong></p>
