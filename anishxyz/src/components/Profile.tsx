@@ -1,8 +1,8 @@
 const Profile = () => {
     return (
         <div className="font-mono text-sm leading-loose space-y-4">
-            <p><strong>Hi!</strong> I'm Anish and I like to build things.</p>
-            <p>I'm currently working on <a href="https://scale.com/genai-platform" className="hover:font-bold">enterprise
+            <p><strong>Hi!</strong> I&#39;m Anish and I like to build things.</p>
+            <p>I&#39;m currently working on <a href="https://scale.com/genai-platform" className="hover:font-bold">enterprise
                 ai @ Scale AI</a> and a scout for <a href="https://a16z.com" className="hover:font-bold">a16z</a>.</p>
             <p>Previously:</p>
             <ul style={{listStyleType: 'disc', marginLeft: '1.5rem'}}>
@@ -12,7 +12,7 @@ const Profile = () => {
                 <li>Co-founded <a href="https://www.ycombinator.com/companies/chatter"
                                   className="hover:font-bold">Chatter</a> (acq.) and built developer tooling for AI
                 </li>
-                <li>Founder in the summer '23 batch of <a href="https://www.ycombinator.com"
+                <li>Founder in the summer &#39;23 batch of <a href="https://www.ycombinator.com"
                                                           className="hover:font-bold">Y Combinator</a></li>
             </ul>
             <p>Always excited to chat!</p>
