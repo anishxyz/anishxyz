@@ -1,4 +1,3 @@
-import ProfileSimple from "@/components/ProfileSimple";
 import Profile from "@/components/Profile"
 
 export default function Home() {
