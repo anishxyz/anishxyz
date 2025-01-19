@@ -15,7 +15,7 @@ const Profile = () => {
                 <li>Founder in the summer &#39;23 batch of <a href="https://www.ycombinator.com"
                                                           className="hover:font-bold">Y Combinator</a></li>
             </ul>
-            <p>Always excited to chat!</p>
+            <p>Always excited to talk about startups, robotics, ai/ml, and food!</p>
             <p><strong>Anish Agrawal 😎</strong></p>
             <hr className="border-[#666]"/>
             <div className="space-y-1 text-[#C50]">
