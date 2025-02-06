@@ -45,9 +45,18 @@ const Profile = () => {
                         instagram:anishagrawal.jpg
                     </a>
                 </p>
+
+                <p>
+                    <a
+                        href="https://beliapp.co/app/anishagrawal"
+                        className="hover:font-bold hover:italic"
+                    >
+                        beli:anishagrawal
+                    </a>
+                </p>
+            </div>
         </div>
-</div>
-);
+    );
 };
 
 export default Profile;
