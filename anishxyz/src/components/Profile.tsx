@@ -39,6 +39,15 @@ const Profile = () => {
 
                 <p>
                     <a
+                        href="https://anishagrawal.substack.com"
+                        className="hover:font-bold hover:italic"
+                    >
+                        substack:anishagrawal
+                    </a>
+                </p>
+
+                <p>
+                    <a
                         href="https://www.instagram.com/anishagrawal.jpg"
                         className="hover:font-bold hover:italic"
                     >
