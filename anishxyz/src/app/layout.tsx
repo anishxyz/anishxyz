@@ -6,9 +6,17 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "anishxyz",
-  description: "",
+  metadataBase: new URL('https://anishxyz.com'),
+  alternates: {
+    canonical: '/'
+  },
+  title: {
+    default: 'Anish Agrawal',
+    template: '%s > Anish Agrawal'
+  },
+  description: 'I like to build things.'
 };
+
 
 export default function RootLayout({
   children,
@@ -24,7 +32,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
+          <main className="max-w-[80ch] mx-auto w-full space-y-6 pt-12">
+            {children}
+          </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
