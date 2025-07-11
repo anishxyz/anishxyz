@@ -14,7 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         if (isExternal) {
           return (
             <a
-              className="hover:font-bold italic"
+              className="hover:font-bold text-[#C50]"
               target="_blank"
               rel="noopener noreferrer"
               {...props}
@@ -24,7 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
         return (
           <Link href={href} legacyBehavior>
-            <a className="hover:font-bold italic" {...props} />
+            <a className="hover:font-bold text-[#C50]" {...props} />
           </Link>
         )
       },
