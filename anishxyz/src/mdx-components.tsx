@@ -14,7 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         if (isExternal) {
           return (
             <a
-              className="hover:font-bold text-[#C50]"
+              className="hover:font-bold text-[oklch(0.75_0.161_238.29)]"
               target="_blank"
               rel="noopener noreferrer"
               {...props}
