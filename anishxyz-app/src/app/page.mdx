@@ -1,3 +1,5 @@
+import Age from '@/components/Age'
+
 **Hi!** I'm Anish and I like to build things.
 
 I'm currently working on agents at [OpenAI](https://openai.com) and a scout for [a16z](https://a16z.com).
@@ -15,12 +17,22 @@ Always excited to talk about startups, robotics, ai/ml, and food!
 **Anish Agrawal 😎**
 
 ---
-
-
-<div className="space-y-1 text-[#C50] [&_a]:!text-[#C50]">
-  [x/twitter:anishtxt](https://x.com/anishtxt)  
-  [linkedin:anishagrawal1](https://www.linkedin.com/in/anishagrawal1)  
-  [substack:anishagrawal](https://anishagrawal.substack.com)  
-  [instagram:anishagrawal.jpg](https://www.instagram.com/anishagrawal.jpg)  
-  [beli:anishagrawal](https://beliapp.co/app/anishagrawal)
+<div className="flex flex-col md:flex-row items-start justify-between gap-4">
+  <div className="space-y-1 text-[#C50] [&_a]:!text-[#C50]">
+    [x/twitter:anishtxt](https://x.com/anishtxt)  
+    [linkedin:anishagrawal1](https://www.linkedin.com/in/anishagrawal1)  
+    [substack:anishagrawal](https://anishagrawal.substack.com)  
+    [instagram:anishagrawal.jpg](https://www.instagram.com/anishagrawal.jpg)  
+    [beli:anishagrawal](https://beliapp.co/app/anishagrawal)
+  </div>
+  <div className="block md:hidden h-4"></div>
+  <div className="block md:hidden text-[#C50]">
+    <div>san francisco, ca</div>
+    <div><Age /></div>
+  </div>
+  <div className="hidden md:block ml-4 shrink-0 text-[#C50]">
+    <div>📍 san francisco</div>
+    <div className="text-right"><Age /></div>
+  </div>
 </div>
+
