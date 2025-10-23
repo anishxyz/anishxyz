@@ -28,7 +28,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           </Link>
         )
       },
-    h1: (props) => <h1 className="text-3xl font-bold mt-6 mb-3" {...props} />,
+    h1: (props) => <h1 className="text-xl font-semibold mt-6 mb-3" {...props} />,
     h2: (props) => <h2 className="text-2xl font-bold mt-6 mb-3" {...props} />,
     h3: (props) => <h3 className="text-xl font-bold mt-4 mb-2" {...props} />,
     h4: (props) => <h4 className="text-lg font-bold mt-4 mb-2" {...props} />,

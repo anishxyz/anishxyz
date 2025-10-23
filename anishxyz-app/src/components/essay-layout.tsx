@@ -18,11 +18,11 @@ export default function EssayLayout({
   return (
     <article className="space-y-8">
       <header className="space-y-3">
-        <h1 className="text-base font-semibold">{title}</h1>
+        <h1 className="text-xl font-semibold">{title}</h1>
         {subtitle ? (
           <p className="text-sm text-foreground/80">{subtitle}</p>
         ) : null}
-        <div className="text-xs uppercase tracking-wide text-footer-foreground">
+        <div className="text-xs tracking-wide text-footer-foreground">
           By {author} · {date}
         </div>
       </header>
