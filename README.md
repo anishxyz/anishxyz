@@ -1,7 +1,4 @@
-### 👋 Hello there, I'm Anish 
+I'm an engineer @ OpenAI  
+Computer Science + Robotics @ UPenn (on leave) <br /> 
 
-👨🏽‍💻 &nbsp; I'm an engineer @ Scale AI (prev. Chatter, Autodesk, Mojo Vision) <br /> 
-🏫 &nbsp; Computer Science + Robotics @ UPenn (on leave) <br /> 
-🟧 &nbsp; Y Combinator S23 Alum - Chatter (acq.)
-
-[x/twitter](https://twitter.com/anishtxt) [linkedin](https://www.linkedin.com/in/anishagrawal1/) [instagram](https://instagram.com/anishagrawal.jpg)
+[x/twitter](https://twitter.com/anishtxt) [linkedin](https://www.linkedin.com/in/anishagrawal1/) [instagram](https://instagram.com/anishagrawal.jpg) [site](https://anish.xyz)
