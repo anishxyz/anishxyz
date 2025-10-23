@@ -37,5 +37,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: (props) => <ul className="list-disc ml-6" {...props} />,
     li: (props) => <li {...props} />,
     hr: (props) => <hr className="border-[#666] border-dashed" {...props} />,
+    blockquote: (props) => (
+      <blockquote
+        className="border-l-2 border-[#C50] bg-[#C50]/5 px-4 py-2 text-sm italic text-foreground/80"
+        {...props}
+      />
+    ),
   }
 }
