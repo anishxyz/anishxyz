@@ -29,11 +29,24 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         )
       },
     h1: (props) => <h1 className="text-xl font-semibold mt-6 mb-3" {...props} />,
-    h2: (props) => <h2 className="text-2xl font-bold mt-6 mb-3" {...props} />,
-    h3: (props) => <h3 className="text-xl font-bold mt-4 mb-2" {...props} />,
-    h4: (props) => <h4 className="text-lg font-bold mt-4 mb-2" {...props} />,
-    h5: (props) => <h5 className="text-base font-bold mt-2 mb-1" {...props} />,
-    h6: (props) => <h6 className="text-sm font-bold mt-2 mb-1" {...props} />,
+    h2: (props) => (
+      <h2
+        className="text-lg font-semibold mt-6 mb-3"
+        {...props}
+      />
+    ),
+    h3: (props) => (
+      <h3 className="text-base font-semibold tracking-wide mt-5 mb-2 uppercase" {...props} />
+    ),
+    h4: (props) => (
+      <h4 className="text-base font-medium mt-4 mb-2 italic text-foreground/90" {...props} />
+    ),
+    h5: (props) => (
+      <h5 className="text-sm font-semibold mt-3 mb-1 uppercase tracking-wide" {...props} />
+    ),
+    h6: (props) => (
+      <h6 className="text-xs font-semibold mt-3 mb-1 uppercase tracking-widest text-foreground/70" {...props} />
+    ),
     ul: (props) => <ul className="list-disc ml-6" {...props} />,
     li: (props) => <li {...props} />,
     hr: (props) => <hr className="border-[#666] border-dashed" {...props} />,
