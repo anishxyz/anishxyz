@@ -18,8 +18,8 @@ export default function Header() {
           )}
         </div>
         <div className="text-right">
-          <Link href="/e" className="font-mono text-sm hover:font-bold">
-            essays
+          <Link href="/weeks" className="font-mono text-sm hover:font-bold">
+            weeks
           </Link>
         </div>
       </div>
