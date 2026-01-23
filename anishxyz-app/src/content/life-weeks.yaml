@@ -82,6 +82,13 @@ events:
     compact: "MV"
     hover: "Started interning at Mojo Vision"
     class: "career"
+  - id: launchx-chicago
+    date: 2019-06-01
+    emoji: "🚀"
+    label: "LaunchX Chicago"
+    compact: "LX"
+    hover: "LaunchX in Chicago"
+    class: "life"
   - id: upenn
     date: 2021-08-01
     emoji: "🎓"
