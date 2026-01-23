@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 
 type LifeWeeksProps = {
   data: LifeWeeksData
+  todayISO?: string
 }
 
 function getCompactText(tile: LifeWeeksTile, maxChars: number): string {
@@ -34,15 +35,14 @@ function isFutureWeek(weekStartISO: string, today: Date): boolean {
   return weekStart.getTime() > now.getTime()
 }
 
-export default function LifeWeeks({ data }: LifeWeeksProps) {
+export default function LifeWeeks({ data, todayISO }: LifeWeeksProps) {
   const [compact, setCompact] = React.useState<boolean>(
     data.settings.compact_mode.enabled
   )
-  const [today, setToday] = React.useState<Date | null>(null)
   const [tileSize, setTileSize] = React.useState<number | null>(null)
   const gridRef = React.useRef<HTMLDivElement | null>(null)
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const node = gridRef.current
     if (!node) return
 
@@ -64,10 +64,11 @@ export default function LifeWeeks({ data }: LifeWeeksProps) {
     observer.observe(node)
     return () => observer.disconnect()
   }, [data.settings.columns])
-
-  React.useEffect(() => {
-    setToday(new Date())
-  }, [])
+  const today = React.useMemo(() => {
+    if (!todayISO) return null
+    const [y, m, d] = todayISO.split("-").map((v) => Number(v))
+    return new Date(Date.UTC(y, m - 1, d))
+  }, [todayISO])
   const tiles = React.useMemo(
     () => data.weeks.filter((tile) => !tile.skip),
     [data.weeks]
@@ -111,7 +112,8 @@ export default function LifeWeeks({ data }: LifeWeeksProps) {
           gridTemplateColumns: `repeat(${data.settings.columns}, ${
             tileSize ? `${tileSize}px` : "12px"
           })`,
-          gridAutoRows: tileSize ? `${tileSize}px` : "12px"
+          gridAutoRows: tileSize ? `${tileSize}px` : "12px",
+          visibility: tileSize ? "visible" : "hidden"
         }}
       >
         {tiles.map((tile) => {

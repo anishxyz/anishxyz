@@ -11,4 +11,7 @@ my life in weeks
 {/*
   Build the data on the server and pass to the client component for rendering.
 */}
-<LifeWeeks data={buildLifeWeeks(lifeWeeksConfig)} />
+<LifeWeeks
+  data={buildLifeWeeks(lifeWeeksConfig)}
+  todayISO={new Date().toISOString().slice(0, 10)}
+/>
