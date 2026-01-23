@@ -12,9 +12,11 @@ type LifeWeeksProps = {
 function getCompactText(tile: LifeWeeksTile, maxChars: number): string {
   const event = tile.event
   if (!event) return ""
-  if (event.compact) return event.compact.slice(0, maxChars)
+  const sliceText = (value: string) =>
+    Array.from(value).slice(0, Math.max(1, maxChars)).join("")
+  if (event.compact) return sliceText(event.compact)
   if (event.emoji) return event.emoji
-  if (event.label) return event.label.slice(0, maxChars)
+  if (event.label) return sliceText(event.label)
   return ""
 }
 
