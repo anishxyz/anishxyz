@@ -125,6 +125,9 @@ export default function LifeWeeks({ data, todayISO }: LifeWeeksProps) {
           const text = compact
             ? getCompactText(tile, data.settings.compact_mode.max_chars)
             : getDisplayText(tile)
+          const monthYear = tile.monthYear
+          const hoverText = event?.hover ?? event?.label
+          const title = hoverText ? `${hoverText} · ${monthYear}` : monthYear
 
           const themeStyle: React.CSSProperties = {}
           if (event?.theme?.bg) themeStyle.backgroundColor = event.theme.bg
@@ -151,7 +154,7 @@ export default function LifeWeeks({ data, todayISO }: LifeWeeksProps) {
                 gridColumn: `span ${span}`,
                 ...themeStyle
               }}
-              title={event?.hover ?? event?.label ?? ""}
+              title={title}
               aria-label={event?.label ?? "week"}
             >
               {text}

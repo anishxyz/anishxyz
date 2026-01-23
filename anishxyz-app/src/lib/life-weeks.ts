@@ -86,6 +86,7 @@ type Candidate = {
 export type LifeWeeksTile = {
   index: number
   startDateISO: string
+  monthYear: string
   event?: Candidate
   span: number
   skip: boolean
@@ -97,6 +98,20 @@ export type LifeWeeksData = {
 }
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000
+const MONTHS_SHORT = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+]
 
 function parseISODate(dateStr: string): Date {
   const [y, m, d] = dateStr.split("-").map((v) => Number(v))
@@ -108,6 +123,12 @@ function formatISODate(date: Date): string {
   const m = String(date.getUTCMonth() + 1).padStart(2, "0")
   const d = String(date.getUTCDate()).padStart(2, "0")
   return `${y}-${m}-${d}`
+}
+
+function formatMonthYearUTC(date: Date): string {
+  const month = MONTHS_SHORT[date.getUTCMonth()]
+  const year = date.getUTCFullYear()
+  return `${month} ${year}`
 }
 
 function addDays(date: Date, days: number): Date {
@@ -162,6 +183,7 @@ export function buildLifeWeeks(config: LifeWeeksConfig): LifeWeeksData {
     return {
       index,
       startDateISO: formatISODate(startDate),
+      monthYear: formatMonthYearUTC(startDate),
       span: 1,
       skip: false
     }
