@@ -9,6 +9,22 @@ settings:
       bg: "rgba(142, 203, 255, 0.25)"
       border: "#8ecbff"
       fg: "#2a78c2"
+    event:
+      bg: "rgba(148, 163, 184, 0.16)"
+      border: "rgba(148, 163, 184, 0.45)"
+      fg: "#64748b"
+    career:
+      bg: "rgba(255, 159, 67, 0.22)"
+      border: "rgba(255, 159, 67, 0.6)"
+      fg: "#c35b12"
+    travel:
+      bg: "rgba(34, 197, 94, 0.2)"
+      border: "rgba(34, 197, 94, 0.6)"
+      fg: "#15803d"
+    life:
+      bg: "rgba(168, 85, 247, 0.2)"
+      border: "rgba(168, 85, 247, 0.6)"
+      fg: "#7c3aed"
   compact_mode:
     enabled: true
     max_chars: 1
@@ -24,6 +40,63 @@ events:
     compact: "🐣"
     hover: "First birthday"
     class: "birthday"
+  - id: iphone-release
+    date: 2007-06-29
+    emoji: "📱"
+    label: "iPhone Launch"
+    compact: "📱"
+    hover: "Original iPhone launch"
+    class: "event"
+  - id: bitcoin-genesis
+    date: 2009-01-03
+    emoji: "₿"
+    label: "Bitcoin Genesis"
+    compact: "₿"
+    hover: "Genesis block mined"
+    class: "event"
+  - id: high-school
+    date: 2017-08-01
+    emoji: "🏫"
+    label: "High school"
+    compact: "HS"
+    hover: "Started high school"
+    class: "career"
+  - id: middle-school
+    date: 2014-08-01
+    emoji: "🏫"
+    label: "Middle school"
+    compact: "MS"
+    hover: "Started middle school"
+    class: "career"
+  - id: elementary-school
+    date: 2008-08-01
+    emoji: "🏫"
+    label: "Elementary school"
+    compact: "ES"
+    hover: "Started elementary school"
+    class: "career"
+  - id: mojo-vision
+    date: 2020-06-01
+    emoji: "👓"
+    label: "Intern @ Mojo Vision"
+    compact: "MV"
+    hover: "Started interning at Mojo Vision"
+    class: "career"
+  - id: upenn
+    date: 2021-08-01
+    emoji: "🎓"
+    label: "UPenn"
+    compact: "UP"
+    hover: "Started at UPenn"
+    class: "career"
+  - id: moved-philly
+    date: 2021-07-25
+    emoji: "🏙️"
+    label: "PHL"
+    label_short: "Moved to PHL"
+    compact: "PHL"
+    hover: "Moved to Philadelphia"
+    class: "life"
 patterns:
   - id: birthdays
     type: yearly
