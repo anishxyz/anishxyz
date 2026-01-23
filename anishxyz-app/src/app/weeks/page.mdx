@@ -1,2 +1,14 @@
-# weeks
+import LifeWeeks from "@/components/LifeWeeks"
+import lifeWeeksConfig from "@/content/life-weeks.json"
+import { buildLifeWeeks } from "@/lib/life-weeks"
+
+export const metadata = {
+  title: "Weeks"
+}
+
+# Weeks
 my life in weeks
+{/*
+  Build the data on the server and pass to the client component for rendering.
+*/}
+<LifeWeeks data={buildLifeWeeks(lifeWeeksConfig)} />

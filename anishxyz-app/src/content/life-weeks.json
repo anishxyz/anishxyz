@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "settings": {
+    "start_date": "2003-02-23",
+    "years": 100,
+    "week_start": "sunday",
+    "columns": 52,
+    "compact_mode": {
+      "enabled": true,
+      "max_chars": 1
+    },
+    "span_rules": {
+      "mode": "range_then_label",
+      "max_span": 8,
+      "label_chars_per_tile": 2
+    }
+  },
+  "events": [
+    {
+      "id": "birthday-2003",
+      "date": "2003-02-23",
+      "emoji": "🐣",
+      "label": "Born",
+      "compact": "🐣",
+      "hover": "First birthday",
+      "class": "birthday"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "birthdays",
+      "type": "yearly",
+      "date": "02-23",
+      "start_year": 2004,
+      "emoji": "🎂",
+      "label": "Birthday",
+      "compact": "🎂",
+      "class": "birthday"
+    }
+  ],
+  "exceptions": []
+}
