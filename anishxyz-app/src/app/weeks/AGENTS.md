@@ -32,6 +32,11 @@ settings:
   years: 100                    # render N years from start_date
   week_start: sunday            # sunday | monday
   columns: 52                   # weeks per row in grid
+  class_themes:
+    birthday:
+      bg: "rgba(142, 203, 255, 0.25)"
+      border: "#8ecbff"
+      fg: "#2a78c2"
   compact_mode:
     enabled: true
     max_chars: 1                # 1–3

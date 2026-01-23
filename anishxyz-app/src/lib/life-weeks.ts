@@ -12,6 +12,7 @@ export type LifeWeeksSettings = {
   years: number
   week_start: WeekStart
   columns: number
+  class_themes?: Record<string, LifeWeeksTheme>
   compact_mode: {
     enabled: boolean
     max_chars: number

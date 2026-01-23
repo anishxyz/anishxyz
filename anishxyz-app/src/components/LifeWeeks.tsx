@@ -130,9 +130,14 @@ export default function LifeWeeks({ data, todayISO }: LifeWeeksProps) {
           const title = hoverText ? `${hoverText} · ${monthYear}` : monthYear
 
           const themeStyle: React.CSSProperties = {}
-          if (event?.theme?.bg) themeStyle.backgroundColor = event.theme.bg
-          if (event?.theme?.fg) themeStyle.color = event.theme.fg
-          if (event?.theme?.border) themeStyle.borderColor = event.theme.border
+          const classTheme = event?.class
+            ? data.settings.class_themes?.[event.class]
+            : undefined
+          const resolvedTheme = event?.theme ?? classTheme
+
+          if (resolvedTheme?.bg) themeStyle.backgroundColor = resolvedTheme.bg
+          if (resolvedTheme?.fg) themeStyle.color = resolvedTheme.fg
+          if (resolvedTheme?.border) themeStyle.borderColor = resolvedTheme.border
 
           if (future) {
             themeStyle.backgroundColor = "transparent"
