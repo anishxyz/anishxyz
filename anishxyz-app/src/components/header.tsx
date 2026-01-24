@@ -18,9 +18,9 @@ export default function Header() {
           )}
         </div>
         <div className="text-right">
-          {/*<Link href="/weeks" className="font-mono text-sm hover:font-bold">*/}
-          {/*  weeks*/}
-          {/*</Link>*/}
+          <Link href="/weeks" className="font-mono text-sm hover:font-bold">
+            weeks
+          </Link>
         </div>
       </div>
     </header>

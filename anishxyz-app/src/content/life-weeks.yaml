@@ -26,7 +26,7 @@ settings:
       border: "rgba(168, 85, 247, 0.6)"
       fg: "#7c3aed"
   compact_mode:
-    enabled: true
+    enabled: false
     max_chars: 1
   span_rules:
     mode: range_then_label
@@ -85,9 +85,16 @@ events:
   - id: launchx-chicago
     date: 2019-06-01
     emoji: "🚀"
-    label: "LaunchX Chicago"
+    label: "Start LaunchX in Chicago"
     compact: "LX"
     hover: "LaunchX in Chicago"
+    class: "life"
+  - id: moved-philly
+    date: 2021-07-23
+    emoji: "🏙️"
+    label: "Moved to PHL"
+    compact: "PHL"
+    hover: "Moved to Philadelphia"
     class: "life"
   - id: upenn
     date: 2021-08-01
@@ -96,14 +103,6 @@ events:
     compact: "UP"
     hover: "Started at UPenn"
     class: "career"
-  - id: moved-philly
-    date: 2021-07-25
-    emoji: "🏙️"
-    label: "PHL"
-    label_short: "Moved to PHL"
-    compact: "PHL"
-    hover: "Moved to Philadelphia"
-    class: "life"
 patterns:
   - id: birthdays
     type: yearly

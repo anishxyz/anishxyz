@@ -75,6 +75,7 @@ type Candidate = {
   priority: number
   source: "event" | "pattern" | "exception"
   isRange: boolean
+  rangeWeeks?: number
   emoji?: string
   label?: string
   compact?: string
@@ -209,11 +210,18 @@ export function buildLifeWeeks(config: LifeWeeksConfig): LifeWeeksData {
 
   config.events.forEach((event, idx) => {
     const id = event.id ?? makeCandidateId("event", String(idx))
+    let rangeWeeks: number | undefined = undefined
+    if (event.start && event.end) {
+      const startWeek = weekIndexForDate(event.start)
+      const endWeek = weekIndexForDate(event.end)
+      rangeWeeks = Math.max(1, endWeek - startWeek + 1)
+    }
     const candidate: Candidate = {
       id,
       priority: 2,
       source: "event",
       isRange: Boolean(event.start || event.end),
+      rangeWeeks,
       emoji: event.emoji,
       label: event.label,
       compact: event.compact,
