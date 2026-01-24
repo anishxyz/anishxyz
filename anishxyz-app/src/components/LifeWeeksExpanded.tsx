@@ -14,6 +14,7 @@ const EXPANDED_COLUMNS = 26
 const CONTAINER_PADDING_PX = 0
 const MIN_TILE_PX = 6
 const TEXT_PADDING_PX = 4
+const GAP_PX = 2
 
 function getDisplayText(tile: LifeWeeksTile): string {
   const event = tile.event
@@ -66,7 +67,10 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
 
     const update = () => {
       const width = node.getBoundingClientRect().width
-      const usable = Math.max(1, width - CONTAINER_PADDING_PX)
+      const usable = Math.max(
+        1,
+        width - CONTAINER_PADDING_PX * 2 - GAP_PX * (EXPANDED_COLUMNS - 1)
+      )
       if (usable <= 1) return
       const size = Math.max(
         MIN_TILE_PX,
@@ -103,11 +107,15 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
     }
 
     const tiles: Array<LifeWeeksTile & { span: number; weekSpan: number; visualSpan: number }> = []
+    const maxSpan = Math.max(1, data.settings.span_rules?.max_span ?? EXPANDED_COLUMNS)
+    const maxVisualSpan = Math.min(EXPANDED_COLUMNS, maxSpan)
     for (let i = 0; i < data.weeks.length; i += 1) {
       const week = data.weeks[i]
       const event = week.event
       const text = event ? getDisplayText(week) : ""
-      const weekSpan = event?.isRange ? Math.max(1, event.rangeWeeks ?? 1) : 1
+      const weekSpan = event?.isRange
+        ? Math.max(1, Math.min(event.rangeWeeks ?? 1, maxVisualSpan))
+        : 1
 
       let textSpan = 1
       if (event && text && ctx) {
@@ -116,7 +124,7 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
       }
 
       let visualSpan = Math.max(weekSpan, textSpan)
-      visualSpan = Math.min(visualSpan, data.weeks.length - i)
+      visualSpan = Math.min(visualSpan, maxVisualSpan, data.weeks.length - i)
 
       tiles.push({ ...week, span: visualSpan, weekSpan, visualSpan })
     }

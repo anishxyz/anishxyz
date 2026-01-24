@@ -31,8 +31,10 @@ function isFutureWeek(weekStartISO: string, today: Date): boolean {
 
 function LifeWeeksCompact({ data, today }: { data: LifeWeeksData; today: Date | null }) {
   const [tileSize, setTileSize] = React.useState<number | null>(null)
+  const [columns, setColumns] = React.useState<number>(data.settings.columns)
   const containerRef = React.useRef<HTMLDivElement | null>(null)
   const gapPx = 2
+  const minTilePx = 10
 
   React.useLayoutEffect(() => {
     const node = containerRef.current
@@ -41,8 +43,15 @@ function LifeWeeksCompact({ data, today }: { data: LifeWeeksData; today: Date | 
     const update = () => {
       const width = node.getBoundingClientRect().width
       if (width > 0) {
-        const usable = Math.max(1, width - gapPx * (data.settings.columns - 1))
-        setTileSize(Math.floor(usable / data.settings.columns))
+        const maxColumns = data.settings.columns
+        const columnsForWidth = Math.max(
+          1,
+          Math.floor((width + gapPx) / (minTilePx + gapPx))
+        )
+        const nextColumns = Math.min(maxColumns, columnsForWidth)
+        const usable = Math.max(1, width - gapPx * (nextColumns - 1))
+        setColumns(nextColumns)
+        setTileSize(Math.floor(usable / nextColumns))
       }
     }
 
@@ -56,7 +65,7 @@ function LifeWeeksCompact({ data, today }: { data: LifeWeeksData; today: Date | 
     const observer = new ResizeObserver(() => update())
     observer.observe(node)
     return () => observer.disconnect()
-  }, [data.settings.columns])
+  }, [data.settings.columns, minTilePx])
 
   const tiles = React.useMemo(() => {
     const resolved: LifeWeeksTile[] = []
@@ -89,9 +98,7 @@ function LifeWeeksCompact({ data, today }: { data: LifeWeeksData; today: Date | 
       <div
         className="grid gap-[2px] w-full"
         style={{
-          gridTemplateColumns: `repeat(${data.settings.columns}, ${
-            tileSize ? `${tileSize}px` : "8px"
-          })`,
+          gridTemplateColumns: `repeat(${columns}, ${tileSize ? `${tileSize}px` : "8px"})`,
           gridAutoRows: tileSize ? `${tileSize}px` : "8px",
           visibility: tileSize ? "visible" : "hidden"
         }}
