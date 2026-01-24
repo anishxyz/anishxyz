@@ -37,7 +37,7 @@ events:
     date: 2003-02-23
     emoji: "🐣"
     label: "Born"
-    compact: "🐣"
+    compact: null
     hover: "First birthday"
     class: "birthday"
   - id: iphone-release
@@ -51,56 +51,56 @@ events:
     date: 2009-01-03
     emoji: "₿"
     label: "Bitcoin Genesis"
-    compact: "₿"
+    compact: null
     hover: "Genesis block mined"
     class: "event"
   - id: high-school
     date: 2017-08-01
     emoji: "🏫"
-    label: "High school"
-    compact: "HS"
+    label: "Started High school"
+    compact: null
     hover: "Started high school"
     class: "career"
   - id: middle-school
     date: 2014-08-01
     emoji: "🏫"
-    label: "Middle school"
-    compact: "MS"
+    label: "Started Middle school"
+    compact: null
     hover: "Started middle school"
     class: "career"
   - id: elementary-school
     date: 2008-08-01
     emoji: "🏫"
-    label: "Elementary school"
-    compact: "ES"
+    label: "Started Elementary school"
+    compact: null
     hover: "Started elementary school"
     class: "career"
   - id: mojo-vision
     date: 2020-06-01
     emoji: "👓"
-    label: "Intern @ Mojo Vision"
-    compact: "MV"
+    label: "Started @ Mojo Vision"
+    compact: null
     hover: "Started interning at Mojo Vision"
     class: "career"
   - id: launchx-chicago
     date: 2019-06-01
     emoji: "🚀"
     label: "Start LaunchX in Chicago"
-    compact: "L"
+    compact: null
     hover: "LaunchX in Chicago"
     class: "life"
   - id: moved-philly
     date: 2021-07-25
     emoji: "🏙️"
     label: "Moved to PHL"
-    compact: "PHL"
+    compact: null
     hover: "Moved to Philadelphia"
     class: "life"
   - id: upenn
     date: 2021-08-01
     emoji: "🎓"
     label: "UPenn"
-    compact: "UP"
+    compact: null
     hover: "Started at UPenn"
     class: "career"
 patterns:
@@ -110,6 +110,6 @@ patterns:
     start_year: 2004
     emoji: "🎂"
     label: "Birthday"
-    compact: "🎂"
+    compact: null
     class: "birthday"
 exceptions: []

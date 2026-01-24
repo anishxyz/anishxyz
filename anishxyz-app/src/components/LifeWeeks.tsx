@@ -15,9 +15,14 @@ function getCompactText(tile: LifeWeeksTile, maxChars: number): string {
   if (!event) return ""
   const sliceText = (value: string) =>
     Array.from(value).slice(0, Math.max(1, maxChars)).join("")
-  if (event.compact) return sliceText(event.compact)
-  if (event.emoji) return event.emoji
+  if (event.compact === null) {
+    if (event.emoji) return event.emoji
+    if (event.label) return sliceText(event.label)
+    return ""
+  }
+  if (typeof event.compact === "string") return sliceText(event.compact)
   if (event.label) return sliceText(event.label)
+  if (event.emoji) return event.emoji
   return ""
 }
 
