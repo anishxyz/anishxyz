@@ -119,7 +119,6 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
       visualSpan = Math.min(visualSpan, data.weeks.length - i)
 
       tiles.push({ ...week, span: visualSpan, weekSpan, visualSpan })
-      i += visualSpan - 1
     }
 
     return tiles
@@ -180,6 +179,7 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
               )}
               style={{
                 gridColumn: `span ${tile.visualSpan}`,
+                zIndex: tile.index,
                 ...themeStyle
               }}
               title={title}

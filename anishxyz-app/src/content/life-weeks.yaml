@@ -86,11 +86,11 @@ events:
     date: 2019-06-01
     emoji: "🚀"
     label: "Start LaunchX in Chicago"
-    compact: "LX"
+    compact: "L"
     hover: "LaunchX in Chicago"
     class: "life"
   - id: moved-philly
-    date: 2021-07-23
+    date: 2021-07-25
     emoji: "🏙️"
     label: "Moved to PHL"
     compact: "PHL"
