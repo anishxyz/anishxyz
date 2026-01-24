@@ -34,7 +34,7 @@ function LifeWeeksCompact({ data, today }: { data: LifeWeeksData; today: Date | 
   const [columns, setColumns] = React.useState<number>(data.settings.columns)
   const containerRef = React.useRef<HTMLDivElement | null>(null)
   const gapPx = 2
-  const minTilePx = 10
+  const minTilePx = 12
 
   React.useLayoutEffect(() => {
     const node = containerRef.current

@@ -15,6 +15,7 @@ const CONTAINER_PADDING_PX = 0
 const MIN_TILE_PX = 6
 const TEXT_PADDING_PX = 4
 const GAP_PX = 2
+const MIN_MOBILE_TILE_PX = 12
 
 function getDisplayText(tile: LifeWeeksTile): string {
   const event = tile.event
@@ -57,6 +58,7 @@ function getWeekRange(startISO: string, spanWeeks: number): { start: string; end
 
 export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProps) {
   const [tileSize, setTileSize] = React.useState<number | null>(null)
+  const [columns, setColumns] = React.useState<number>(EXPANDED_COLUMNS)
   const [measureFont, setMeasureFont] = React.useState<string>("")
   const containerRef = React.useRef<HTMLDivElement | null>(null)
   const measureRef = React.useRef<HTMLSpanElement | null>(null)
@@ -67,15 +69,19 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
 
     const update = () => {
       const width = node.getBoundingClientRect().width
+      const minTile = Math.max(MIN_TILE_PX, MIN_MOBILE_TILE_PX)
+      const columnsForWidth = Math.max(
+        1,
+        Math.floor((width + GAP_PX) / (minTile + GAP_PX))
+      )
+      const nextColumns = Math.min(EXPANDED_COLUMNS, columnsForWidth)
       const usable = Math.max(
         1,
-        width - CONTAINER_PADDING_PX * 2 - GAP_PX * (EXPANDED_COLUMNS - 1)
+        width - CONTAINER_PADDING_PX * 2 - GAP_PX * (nextColumns - 1)
       )
       if (usable <= 1) return
-      const size = Math.max(
-        MIN_TILE_PX,
-        Math.floor((usable / EXPANDED_COLUMNS) * TILE_SCALE)
-      )
+      const size = Math.max(MIN_TILE_PX, Math.floor((usable / nextColumns) * TILE_SCALE))
+      setColumns(nextColumns)
       setTileSize(size)
     }
 
@@ -107,8 +113,8 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
     }
 
     const tiles: Array<LifeWeeksTile & { span: number; weekSpan: number; visualSpan: number }> = []
-    const maxSpan = Math.max(1, data.settings.span_rules?.max_span ?? EXPANDED_COLUMNS)
-    const maxVisualSpan = Math.min(EXPANDED_COLUMNS, maxSpan)
+    const maxSpan = Math.max(1, data.settings.span_rules?.max_span ?? columns)
+    const maxVisualSpan = Math.min(columns, maxSpan)
     for (let i = 0; i < data.weeks.length; i += 1) {
       const week = data.weeks[i]
       const event = week.event
@@ -144,9 +150,7 @@ export default function LifeWeeksExpanded({ data, today }: LifeWeeksExpandedProp
       <div
         className="grid gap-[2px] w-full"
         style={{
-          gridTemplateColumns: `repeat(${EXPANDED_COLUMNS}, ${
-            tileSize ? `${tileSize}px` : "12px"
-          })`,
+          gridTemplateColumns: `repeat(${columns}, ${tileSize ? `${tileSize}px` : "12px"})`,
           gridAutoRows: tileSize ? `${tileSize}px` : "12px",
           visibility: tileSize ? "visible" : "hidden"
         }}
