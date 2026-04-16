@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const libreBaskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-libre-baskerville",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://anish.xyz'),
@@ -34,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${libreBaskerville.className} ${inter.variable} ${libreBaskerville.variable}`}>
+      <body className={inter.variable}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
