@@ -8,6 +8,17 @@ const THEMES = ["light", "dark"] as const;
 
 type ThemeOption = (typeof THEMES)[number];
 
+function isEditableTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  const tagName = target.tagName;
+  return (
+    target.isContentEditable ||
+    tagName === "INPUT" ||
+    tagName === "TEXTAREA" ||
+    tagName === "SELECT"
+  );
+}
+
 function getActiveTheme(
   mounted: boolean,
   theme: string | undefined,
@@ -25,6 +36,24 @@ export default function ThemeToggle() {
   React.useEffect(() => {
     setMounted(true);
   }, []);
+
+  React.useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.metaKey || event.ctrlKey || event.altKey || isEditableTarget(event.target)) {
+        return;
+      }
+
+      const key = event.key.toLowerCase();
+      if (key === "l") {
+        setTheme("light");
+      } else if (key === "d") {
+        setTheme("dark");
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [setTheme]);
 
   const activeTheme = getActiveTheme(mounted, theme, resolvedTheme);
 
