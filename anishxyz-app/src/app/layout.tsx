@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-baskerville",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://anish.xyz'),
@@ -26,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${libreBaskerville.className} ${inter.variable} ${libreBaskerville.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -36,8 +43,8 @@ export default function RootLayout({
         >
           <div className="min-h-screen flex flex-col">
             <Header />
-            <main className="flex-1 w-full px-6 py-12 md:px-8 md:py-20">
-              <div className="mx-auto w-full max-w-[100ch] space-y-6">
+            <main className="flex-1 w-full px-6 py-14 md:px-8 md:py-24 dark:py-12 dark:md:py-20">
+              <div className="mx-auto w-full max-w-[96ch] space-y-8 dark:max-w-[100ch] dark:space-y-6">
                 {children}
               </div>
             </main>
